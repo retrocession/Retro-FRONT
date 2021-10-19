@@ -38,6 +38,13 @@
       </v-btn>
       <v-btn
         icon
+        @click.stop="$auth.logout() && $router.push({
+              path: '/login'})"
+      >
+        LOGOUT
+      </v-btn>
+      <v-btn
+        icon
         @click.stop="clipped = !clipped"
       >
         <v-icon>mdi-application</v-icon>
@@ -98,14 +105,19 @@ export default {
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Welcome',
+          title: 'Dashboard',
           to: '/'
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
+          title: 'Mon compte',
+          to: '/account'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'Mes offres',
+          to: '/offers'
+        },
       ],
       miniVariant: false,
       right: true,

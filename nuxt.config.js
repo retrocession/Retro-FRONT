@@ -38,18 +38,61 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
+  auth: {
+    strategies: {
+      laravelSanctum: {
+        provider: 'laravel/sanctum',
+        url: 'http://localhost:8000',
+        endpoints: {
+          login: {url: '/api/login'},
+          logout: {url: '/api/logout'},
+          user: {url: '/api/me'}
+        },
+        token: {
+          property: 'token',
+        },
+        tokenRequired: true,
+        tokenType: 'Bearer'
+      }
+    },
+    redirect: {
+      login: '/login',
+      logout: '/',
+      callback: '/login',
+      home: '/'
+    },
+    localStorage: false
+  },
+  // proxy: {
+  //   '/api/': {
+  //     target: 'http://localhost:8000',
+  //     pathRewrite: { '^/api': '' }
+  //   }
+  // },
+  axios: {
+    baseURL: 'http://localhost:8000/api',
+    // proxy: true,
+    credentials: true,
+    withCredentials: true
+  },
+
+  router: {
+    middleware: ['auth']
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
+          primary: '#ffb74d' || colors.blue.darken2,
+          accent: '#ffae37' || colors.grey.darken3,
+          secondary: '#64b5f6' || colors.amber.darken3,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
