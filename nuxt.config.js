@@ -45,7 +45,7 @@ export default {
     strategies: {
       laravelSanctum: {
         provider: 'laravel/sanctum',
-        url: 'https://retrocession-api.herokuapp.com',
+        url: 'http://localhost:8000',
         endpoints: {
           login: {url: '/api/login'},
           logout: {url: '/api/logout'},
@@ -73,7 +73,7 @@ export default {
   //   }
   // },
   axios: {
-    baseURL: 'https://retrocession-api.herokuapp.com/api',
+    baseURL: 'http://localhost:8000/api',
     // proxy: true,
     credentials: true,
     withCredentials: true

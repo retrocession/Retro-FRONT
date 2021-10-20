@@ -43,9 +43,12 @@
         </v-card-title>
         <v-card-text
           v-for="offer in offers"
-          @click="offerDetailsDialog = true; currentOffer = offer"
         >
+          <span
+            @click="offerDetailsDialog = true; currentOffer = offer"
+          >
           {{ offer.title }}
+          </span>
           <v-btn
             icon
             @click="deleteOfferDialog = true; currentOffer = offer"
