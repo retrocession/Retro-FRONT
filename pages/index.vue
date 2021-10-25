@@ -71,6 +71,7 @@
         </v-card-title>
         <v-card-text
           v-for="offer in offers"
+          :key="offer.id"
         >
           {{ offer.title }}
         </v-card-text>

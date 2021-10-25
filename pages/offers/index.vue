@@ -32,13 +32,16 @@
                 </v-chip>
                 {{ offer.model }} {{ offer.reference }}
               </v-card-subtitle>
+              <v-card-actions>
+                {{ offer.created_at }}
+              </v-card-actions>
               <v-card-text>
                 Test
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn>
-                  Faire une demande
+                  Répondre
                 </v-btn>
               </v-card-actions>
             </v-card>
