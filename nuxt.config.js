@@ -75,7 +75,13 @@ export default {
   axios: {
     // baseURL: 'https://retrocession-api.herokuapp.com/api',
     proxy: true,
-    withCredentials: true
+    withCredentials: false, // This is the default
+    crossDomain: true,
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    },
+    timeout: 10000
   },
 
   router: {
