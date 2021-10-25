@@ -45,7 +45,7 @@ export default {
     strategies: {
       laravelSanctum: {
         provider: 'laravel/sanctum',
-        url: 'https://retrocession-api.herokuapp.com/',
+        url: 'https://retrocession-api.herokuapp.com',
         endpoints: {
           login: {url: '/api/login'},
           logout: {url: '/api/logout'},
