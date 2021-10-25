@@ -66,16 +66,15 @@ export default {
     },
     localStorage: false
   },
-  // proxy: {
-  //   '/api/': {
-  //     target: 'http://localhost:8000',
-  //     pathRewrite: { '^/api': '' }
-  //   }
-  // },
+  proxy: {
+    '/api/': {
+      target: 'https://retrocession-api.herokuapp.com',
+      pathRewrite: { '^/api': '' }
+    }
+  },
   axios: {
-    baseURL: 'https://retrocession-api.herokuapp.com/api',
-    // proxy: true,
-    credentials: true,
+    // baseURL: 'https://retrocession-api.herokuapp.com/api',
+    proxy: true,
     withCredentials: true
   },
 
