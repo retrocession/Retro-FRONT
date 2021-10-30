@@ -76,8 +76,7 @@ export default {
     // baseURL: 'https://retrocession-api.herokuapp.com/api',
     // proxy: true,
     baseURL: 'https://api.retrocession.me/api',
-    withCredentials: false,
-    credentials: false
+    withCredentials: true,
   },
 
   router: {
