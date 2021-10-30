@@ -45,7 +45,7 @@ export default {
     strategies: {
       laravelSanctum: {
         provider: 'laravel/sanctum',
-        url: 'https://retro-api-d4gip.ondigitalocean.app',
+        url: 'https://api.retrocession.me',
         endpoints: {
           login: {url: '/api/login'},
           logout: {url: '/api/logout'},
@@ -75,8 +75,9 @@ export default {
   axios: {
     // baseURL: 'https://retrocession-api.herokuapp.com/api',
     // proxy: true,
-    baseURL: 'https://retro-api-d4gip.ondigitalocean.app/api',
-    withCredentials: true
+    baseURL: 'https://api.retrocession.me/api',
+    withCredentials: false,
+    credentials: false
   },
 
   router: {
