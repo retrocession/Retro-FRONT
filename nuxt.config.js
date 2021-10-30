@@ -77,6 +77,7 @@ export default {
     // proxy: true,
     baseURL: 'https://api.retrocession.me/api',
     withCredentials: true,
+    credentials: true,
   },
 
   router: {
