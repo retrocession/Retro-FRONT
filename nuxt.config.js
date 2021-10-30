@@ -4,9 +4,9 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - Retro-FRONT',
-    title: 'Retro-FRONT',
+    title: 'Retrocession',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'fr'
     },
     meta: [
       { charset: 'utf-8' },
@@ -66,15 +66,7 @@ export default {
     },
     localStorage: false
   },
-  // proxy: {
-  //   '/api/': {
-  //     target: 'http://127.0.0.1:8000',
-  //     pathRewrite: { '^/api': '' }
-  //   }
-  // },
   axios: {
-    // baseURL: 'https://retrocession-api.herokuapp.com/api',
-    // proxy: true,
     baseURL: 'https://api.retrocession.me/api',
     withCredentials: true,
     credentials: true,
