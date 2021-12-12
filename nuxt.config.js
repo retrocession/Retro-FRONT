@@ -45,7 +45,7 @@ export default {
     strategies: {
       laravelSanctum: {
         provider: 'laravel/sanctum',
-        url: 'http://localhost:8080',
+        url: 'https://api.retrocession.me',
         endpoints: {
           login: {url: '/api/login'},
           logout: {url: '/api/logout'},
@@ -67,7 +67,7 @@ export default {
     localStorage: false
   },
   axios: {
-    baseURL: 'http://localhost:8080/api',
+    baseURL: 'https://api.retrocession.me/api',
     withCredentials: true,
     credentials: true,
   },
